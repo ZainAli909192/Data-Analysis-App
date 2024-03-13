@@ -42,6 +42,14 @@ if upload is not None:
 
     if st.checkbox("Sort"): 
         data_column=st.radio("Please select Column: ",(data.columns))
+        if(data_column is not None):
+            data_order=st.radio("Pick the order: ",("Ascending","Descending"))
+            if data_order=='Ascending':
+                st.text('Sorting in ascending')
+                st.write(data.sort_values(by=data_column))
+            elif data_order=='Descending':
+                st.text('Sorting in Descending')
+                st.write(data.sort_values(by=data_column, ascending=False))
 
     if st.checkbox("Find null values"):
         test=data.isnull().values.any()
