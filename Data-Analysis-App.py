@@ -24,12 +24,7 @@ if upload is not None:
         if st.button("Tail"):
             st.write(data.tail())
    
-    if st.checkbox("Shape"):
-        data_shape=st.radio("What dimension?" ,("Rows", "column") )
-        if data_shape=='Rows':
-            st.write("Number of Rows: ",data.shape[0])
-        else:
-            st.write("Number of Columns: ",data.shape[1])
+   
    
     if st.checkbox("Overal summary of dataset"):
         st.write(data.describe())
