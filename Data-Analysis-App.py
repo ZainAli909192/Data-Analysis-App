@@ -83,3 +83,5 @@ if upload is not None:
     if st.button("Save updated Data file"):
         open('streamlit.csv','w').write(data.to_csv())
         st.text("File is saved in your current folder...")
+st.title('Data Anlaysis project')
+st.subheader('Data Analysis using python & streamlit')
