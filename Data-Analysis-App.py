@@ -10,8 +10,6 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 path='E:\\All python\\Data Analysis\\Data sets\\youtube_dataset.csv'
 data=pd.read_csv(path)
 
-st.title('Data Anlaysis project')
-st.subheader('Data Analysis using python & streamlit')
 
 # upload data set 
 upload=st.file_uploader("Upload your dataset (in CSV formate)")
